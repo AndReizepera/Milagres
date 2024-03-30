@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+            *{
+        margin: 0px;
+        padding: 0px;
+        }
+
+        main{
+            background-image: url(foto.jpeg);
+            background-size: cover;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-position: right right;
+            opacity: 0;
+            transition: opacity 1s ease-in-out; 
+        }
+        #capa{
+            opacity: 0;
+            transition: opacity 2s ease-in-out;
+            background-color: rgba(255, 255, 255, 0.548);
+            height: 100vh;
+            width: 75% ;
+            margin: auto;
+            overflow-y: scroll;
+            
+        }
+        header{
+            opacity: 0;
+            transition: opacity 2s ease-in-out;
+            padding: 4px;
+        }
+        header>h1{
+            color: rgb(0, 0, 0);
+            text-align: center;
+            font-size: 12vw;
+        }
+        h1#de{
+            font-size: 5vw;
+        }
+    
+        button{
+            position: absolute; 
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%); 
+            margin: auto;
+            height: 100px;
+            width: 100px;
+            z-index: 999; 
+            border-radius: 10px;
+            background-color: red;
+        }
+        button:hover{
+            background-color: rgba(255, 0, 0, 0.071);
+            color: red;
+            border-color: red;
+               }
+        #texto{
+            opacity: 0;
+            transition: opacity 2s ease-in-out;
+            text-align:justify;
+            text-indent: 5vw;
+            font-size: 4vw;
+            padding-top: 10vw;
+            padding-left: 10vw;
+            padding-right: 10vw;
+        }
+        #cont{
+            padding-top: 5vw; 
+           display: flex;
+           justify-content: center;
+
+        }
+        #cont>img{
+            max-width: 100%; 
+            height: auto;
+           mix-blend-mode: color-burn; 
+        }
+</style>
+    </style>
+</head>
+<body>
+    <button id="meuBotao" onclick="mostrarTexto()">Clique Aqui</button>
+    <main>
+          <div id="capa">
+            <header>
+                <h1>Bodas</h1>
+                <h1 id="de">de</h1>
+                <h1>Milagres</h1>
+            </header>
+            <p id="texto">
+                
+            Enfim, um ano se passou desde que a nossa vida juntos começou, um ano repleto de felicidades e conquistas, marcado por momentos que ficaram presos na memória, momentos que espero nunca esquecer. Esse será um dos vários anos que, se o Supremo permitir, a gente passará juntos, cada vez mais fortes e mais unidos. <br> <br>
+            &nbsp;&nbsp;Primeiramente, agradeço a Deus pelo nosso relacionamento e por tudo que Ele nos proporcionou e nos proporcionará. Que Deus continue nos abençoando, trazendo conforto nos momentos difíceis e que a gente nunca se afaste e ignore a extrema graça de Deus, sempre caminhando e gratos pela misericórdia de Cristo. <br> <br>
+            &nbsp;&nbsp;Mesmo não sendo um casal perfeito, possuímos amor mútuo, um amor verdadeiro e sincero. Quando algum de nós está triste, o outro consola e dá conselhos para seguir em frente, cumprindo o dever de ser um parceiro, desse modo, sustentando-nos um ao outro, de tal forma que em Eclesiastes 4:9-10 diz: “Melhor é serem dois do que um! Têm melhor paga do seu trabalho. Porque se caírem, um levanta o companheiro; ai, porém, do que estiver só; pois, caindo, não haverá quem o levante.” <br> <br>
+            &nbsp;&nbsp;Oro todos os dias para Deus sustentar o nosso namoro, trazendo-nos alegrias e paciência, pois essa parte do relacionamento, na qual ambos os lados mal possuem bens materiais ou requisitos para aliviar necessidades, é difícil. Porém, confiando na providência divina, entendemos que isso é questão de tempo, pois o nosso Deus nos dará, se Ele quiser, tudo que a gente precisar, mas devemos entender que a graça já basta. <br> <br>
+            &nbsp;&nbsp;Eu te amo e te amarei para o resto da vida, sou gracioso pelo amor e carinho que você tem por mim, abençoado por ter você como a minha namorada. Espero construir um futuro grande com você, vivendo em uma vida cheia de conquistas e felicidades, mas mesmo não possuindo essas coisas, a vida ao seu lado será suficiente. <br> <br>
+            &nbsp;&nbsp; Então é isso, fico muito feliz ao estar do seu lado e espero que futuramente não comemoramos mais aniversários de namoro, mas sim de casamento, o momento que terei que amar a minha esposa como cristo amou a igreja e se entregou por ela, e o momento que você irá me auxiliar como Deus auxilia o seu povo. <br> <br>
+            &nbsp;&nbsp;Feliz um ano de namoro, feliz Bodas de Milagres. Te amo ❤.
+
+            </p>
+            <div id="cont"><img src="https://www.icegif.com/wp-content/uploads/2022/08/icegif-879.gif" alt=""></div>
+            </div>
+    </main>
+    <script>
+        function mostrarTexto() {
+            var botao = document.getElementById('meuBotao');
+            var texto = document.getElementById('texto');
+            var titulo= document.querySelector("header")
+            var capa= document.querySelector('div#capa')
+            var fundo= document.querySelector('main')
+            botao.style.display = 'none';
+            texto.style.opacity = '1';
+            titulo.style.opacity='1';
+            capa.style.opacity='1';
+            fundo.style.opacity='1';
+        }
+    </script>
+</body>
+</html>
